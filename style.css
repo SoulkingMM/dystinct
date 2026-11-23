@@ -1,0 +1,100 @@
+/* =========================================================
+   DysTinct – feuille de style commune
+   Responsable du fichier : [Prénom]
+   Les couleurs et polices seront remplacées par la charte
+   graphique validée en cours de graphisme.
+   ========================================================= */
+
+/* ---------- 1. Variables (charte graphique) ---------- */
+:root {
+  --couleur-principale: #394999;   /* bleu DysTinct */
+  --couleur-secondaire: #EC9C5C;   /* orange DysTinct */
+  --couleur-texte: #1E1E2E;        /* texte presque noir, plus doux que #000 */
+  --couleur-fond: #FFF9F2;        /* fond légèrement teinté (lisibilité dys) */
+  --couleur-fond-alt: #F3F0FA;
+  --police-titres: "Fredoka", sans-serif;
+  --police-texte: "Lexend", Arial, sans-serif;
+  --rayon: 16px;
+  --largeur-max: 1120px;
+}
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--police-texte);
+  font-size: 1.0625rem;        /* ~17 px : minimum 16 px pour un public dys */
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background: var(--couleur-fond);
+  text-align: left;            /* jamais justifié */
+}
+
+h1, h2, h3 { font-family: var(--police-titres); line-height: 1.2; }
+img { max-width: 100%; height: auto; }
+a { color: var(--couleur-principale); }
+
+.conteneur {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- 3. Boutons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 24px;
+  border-radius: 999px; border: 2px solid transparent;
+  font-weight: 600; text-decoration: none; cursor: pointer;
+  font-family: inherit; font-size: 1rem;
+}
+.btn-principal { background: var(--couleur-secondaire); color: #2B1A12; }
+.btn-secondaire { border-color: var(--couleur-principale); color: var(--couleur-principale); background: #FFF; }
+
+/* ---------- 4. Header ---------- */
+.site-header { background: #FFF; border-bottom: 2px solid #EEE6DA; }
+.site-header .conteneur {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 16px;
+  padding-top: 16px; padding-bottom: 16px;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1.5rem; }
+.site-header nav { flex: 1 1 auto; }
+.site-header nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.site-header nav a { color: var(--couleur-texte); text-decoration: none; }
+.site-header nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+.recherche input { width: 140px; min-height: 40px; border-radius: 999px; border: 2px solid #DDD; padding: 0 14px; font-family: inherit; }
+
+/* ---------- 5. Footer ---------- */
+.site-footer { background: var(--couleur-texte); color: #E9E6FF; margin-top: 80px; padding-top: 48px; }
+.site-footer a { color: #E9E6FF; }
+.site-footer h2 { font-size: 1.1rem; color: #FFF; }
+.site-footer ul { list-style: none; padding: 0; }
+.footer-grille { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.footer-bas { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-bottom: 24px; font-size: 0.875rem; border-top: 1px solid #44426B; margin-top: 24px; }
+.newsletter { display: flex; flex-direction: column; gap: 8px; }
+.newsletter input { min-height: 44px; border-radius: 999px; border: 0; padding: 0 14px; font-family: inherit; }
+
+/* ---------- 6. Styles des pages (chacun complète sa partie) ---------- */
+/* Accueil      : .hero .simulation .missions .temoignages .bandeau-don */
+/* À propos     : .presentation .frise .transparence                   */
+/* Valeurs      : .valeurs .troubles                                  */
+/* Équipe       : .equipe .rejoindre                                  */
+/* Don          : .besoins .formulaire-don                            */
+/* Connexion    : .connexion                                          */
+/* Inscription  : .inscription                                        */
+
+main > section { max-width: var(--largeur-max); margin: 0 auto; padding: 48px 24px 0; }
+
+/* ---------- 7. Responsive ---------- */
+@media (max-width: 900px) {
+  .footer-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .footer-grille { grid-template-columns: minmax(0, 1fr); }
+}

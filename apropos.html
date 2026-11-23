@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos – DysTinct</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (identique sur toutes les pages) ===== -->
+  <header class="site-header">
+    <div class="conteneur">
+      <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="" width="44" height="44">
+        <span>DysTinct</span>
+      </a>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html" aria-current="page">À propos</a></li>
+          <li><a href="valeurs.html">Nos valeurs</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+        </ul>
+      </nav>
+      <form class="recherche" role="search">
+        <label for="recherche" class="visually-hidden">Rechercher sur le site</label>
+        <input type="search" id="recherche" placeholder="Rechercher…">
+      </form>
+      <a href="connexion.html" class="btn btn-secondaire">Connexion</a>
+      <a href="don.html" class="btn btn-principal">Faire un don</a>
+    </div>
+  </header>
+
+  <!-- ===== CONTENU DE LA PAGE ===== -->
+  <main>
+    <section class="titre-page">
+      <h1>À propos de DysTinct</h1>
+    </section>
+
+    <!-- TEXTE ÉDITORIAL : 15 à 20 lignes (origine, enjeux, objectifs) -->
+    <section class="presentation"></section>
+
+    <!-- FRISE CHRONOLOGIQUE verticale en CSS (::before / ::after) -->
+    <section class="frise"></section>
+
+    <!-- TRANSPARENCE ET IMPACT : utilisation des fonds + gouvernance -->
+    <section class="transparence"></section>
+  </main>
+
+  <!-- ===== FOOTER (identique sur toutes les pages) ===== -->
+  <footer class="site-footer">
+    <div class="conteneur footer-grille">
+      <div>
+        <p class="logo-footer">DysTinct</p>
+        <p>Slogan de l'association</p>
+      </div>
+      <nav aria-label="Liens rapides">
+        <h2>Liens rapides</h2>
+        <ul>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="valeurs.html">Nos valeurs</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="don.html">Faire un don</a></li>
+        </ul>
+      </nav>
+      <form class="newsletter">
+        <h2>Newsletter</h2>
+        <label for="newsletter-apropos">Votre e-mail</label>
+        <input type="email" id="newsletter-apropos" placeholder="votre@email.fr">
+        <button type="submit" class="btn btn-principal">OK</button>
+      </form>
+      <div>
+        <h2>Réseaux sociaux</h2>
+        <ul class="reseaux">
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="conteneur footer-bas">
+      <p>© 2026 DysTinct</p>
+      <p><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
