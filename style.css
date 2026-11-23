@@ -1,100 +1,206 @@
-/* =========================================================
-   DysTinct – feuille de style commune
-   Responsable du fichier : [Prénom]
-   Les couleurs et polices seront remplacées par la charte
-   graphique validée en cours de graphisme.
-   ========================================================= */
-
-/* ---------- 1. Variables (charte graphique) ---------- */
+/* couleurs et polices */
 :root {
-  --couleur-principale: #394999;   /* bleu DysTinct */
-  --couleur-secondaire: #EC9C5C;   /* orange DysTinct */
-  --couleur-texte: #1E1E2E;        /* texte presque noir, plus doux que #000 */
-  --couleur-fond: #FFF9F2;        /* fond légèrement teinté (lisibilité dys) */
-  --couleur-fond-alt: #F3F0FA;
-  --police-titres: "Fredoka", sans-serif;
-  --police-texte: "Lexend", Arial, sans-serif;
-  --rayon: 16px;
-  --largeur-max: 1120px;
+  --bleu: #394999;
+  --orange: #EC9C5C;
+  --texte: #1E1E2E;
+  --fond: #FFF9F2;
 }
 
-/* ---------- 2. Base ---------- */
-*, *::before, *::after { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: var(--police-texte);
-  font-size: 1.0625rem;        /* ~17 px : minimum 16 px pour un public dys */
+  font-family: Arial, sans-serif;
+  font-size: 17px;
   line-height: 1.6;
-  color: var(--couleur-texte);
-  background: var(--couleur-fond);
-  text-align: left;            /* jamais justifié */
+  color: var(--texte);
+  background-color: var(--fond);
 }
 
-h1, h2, h3 { font-family: var(--police-titres); line-height: 1.2; }
-img { max-width: 100%; height: auto; }
-a { color: var(--couleur-principale); }
+h1, h2, h3 {
+  color: var(--bleu);
+}
+
+a {
+  color: var(--bleu);
+}
+
+img {
+  max-width: 100%;
+}
 
 .conteneur {
-  max-width: var(--largeur-max);
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.visually-hidden {
-  position: absolute; width: 1px; height: 1px;
-  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
-}
-
-/* ---------- 3. Boutons ---------- */
+/* boutons */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 48px; padding: 0 24px;
-  border-radius: 999px; border: 2px solid transparent;
-  font-weight: 600; text-decoration: none; cursor: pointer;
-  font-family: inherit; font-size: 1rem;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--bleu);
+  cursor: pointer;
+  font-size: 16px;
 }
-.btn-principal { background: var(--couleur-secondaire); color: #2B1A12; }
-.btn-secondaire { border-color: var(--couleur-principale); color: var(--couleur-principale); background: #FFF; }
 
-/* ---------- 4. Header ---------- */
-.site-header { background: #FFF; border-bottom: 2px solid #EEE6DA; }
-.site-header .conteneur {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 16px;
-  padding-top: 16px; padding-bottom: 16px;
+.btn-contour {
+  background-color: white;
+  color: var(--bleu);
 }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1.5rem; }
-.site-header nav { flex: 1 1 auto; }
-.site-header nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; }
-.site-header nav a { color: var(--couleur-texte); text-decoration: none; }
-.site-header nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
-.recherche input { width: 140px; min-height: 40px; border-radius: 999px; border: 2px solid #DDD; padding: 0 14px; font-family: inherit; }
 
-/* ---------- 5. Footer ---------- */
-.site-footer { background: var(--couleur-texte); color: #E9E6FF; margin-top: 80px; padding-top: 48px; }
-.site-footer a { color: #E9E6FF; }
-.site-footer h2 { font-size: 1.1rem; color: #FFF; }
-.site-footer ul { list-style: none; padding: 0; }
-.footer-grille { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
-.footer-bas { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-bottom: 24px; font-size: 0.875rem; border-top: 1px solid #44426B; margin-top: 24px; }
-.newsletter { display: flex; flex-direction: column; gap: 8px; }
-.newsletter input { min-height: 44px; border-radius: 999px; border: 0; padding: 0 14px; font-family: inherit; }
+.btn-don {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: var(--texte);
+}
 
-/* ---------- 6. Styles des pages (chacun complète sa partie) ---------- */
-/* Accueil      : .hero .simulation .missions .temoignages .bandeau-don */
-/* À propos     : .presentation .frise .transparence                   */
-/* Valeurs      : .valeurs .troubles                                  */
-/* Équipe       : .equipe .rejoindre                                  */
-/* Don          : .besoins .formulaire-don                            */
-/* Connexion    : .connexion                                          */
-/* Inscription  : .inscription                                        */
+/* header */
+header {
+  background-color: white;
+  border-bottom: 2px solid #EEE6DA;
+}
 
-main > section { max-width: var(--largeur-max); margin: 0 auto; padding: 48px 24px 0; }
+.header-contenu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 
-/* ---------- 7. Responsive ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--texte);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.actif {
+  color: var(--bleu);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.recherche {
+  width: 140px;
+  padding: 10px 14px;
+  border: 2px solid #DDD;
+  border-radius: 30px;
+}
+
+/* footer */
+footer {
+  background-color: var(--bleu);
+  color: white;
+  margin-top: 80px;
+  padding-top: 40px;
+}
+
+footer h3,
+footer a {
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-titre {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-colonnes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.newsletter {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 30px;
+}
+
+.footer-bas {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+/* sections des pages */
+main section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+/* accueil */
+
+/* à propos */
+
+/* valeurs */
+
+/* équipe */
+
+/* don */
+
+/* connexion et inscription */
+
+/* responsive tablette */
 @media (max-width: 900px) {
-  .footer-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-colonnes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media (max-width: 560px) {
-  .footer-grille { grid-template-columns: minmax(0, 1fr); }
+
+/* responsive téléphone */
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  .footer-colonnes {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bas {
+    flex-direction: column;
+  }
 }

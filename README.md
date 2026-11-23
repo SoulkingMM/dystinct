@@ -39,6 +39,6 @@ dystinct/
 
 1. Avant de coder : **Sync / Pull** pour récupérer le travail des autres.
 2. Chacun modifie **uniquement ses pages**.
-3. `style.css` : seul le responsable modifie les parties communes ; chacun ajoute le style de sa page dans la section 6.
+3. `style.css` : chacun ajoute le style de sa page sous le commentaire de sa page (`/* accueil */`, `/* don */`...).
 4. Après avoir codé : **Commit** avec un message clair (ex. « don : sélecteur de montant »), puis **Push / Sync**.
 5. Les images vont dans `images/`, avec des noms sans espaces ni accents (`atelier-classe.jpg`).

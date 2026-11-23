@@ -3,81 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil – DysTinct</title>
+  <title>Accueil - DysTinct</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== HEADER (identique sur toutes les pages) ===== -->
-  <header class="site-header">
-    <div class="conteneur">
+  <!-- header -->
+  <header>
+    <div class="conteneur header-contenu">
       <a href="index.html" class="logo">
-        <img src="images/logo.svg" alt="" width="44" height="44">
-        <span>DysTinct</span>
+        <img src="images/logo.svg" alt="Logo DysTinct" width="44" height="44">
+        DysTinct
       </a>
-      <nav aria-label="Menu principal">
+      <nav>
         <ul>
-          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="index.html" class="actif">Accueil</a></li>
           <li><a href="apropos.html">À propos</a></li>
           <li><a href="valeurs.html">Nos valeurs</a></li>
           <li><a href="equipe.html">L'équipe</a></li>
         </ul>
       </nav>
-      <form class="recherche" role="search">
-        <label for="recherche" class="visually-hidden">Rechercher sur le site</label>
-        <input type="search" id="recherche" placeholder="Rechercher…">
-      </form>
-      <a href="connexion.html" class="btn btn-secondaire">Connexion</a>
-      <a href="don.html" class="btn btn-principal">Faire un don</a>
+      <input type="search" class="recherche" placeholder="Rechercher...">
+      <a href="connexion.html" class="btn btn-contour">Connexion</a>
+      <a href="don.html" class="btn btn-don">Faire un don</a>
     </div>
   </header>
 
-  <!-- ===== CONTENU DE LA PAGE ===== -->
   <main>
-    <!-- HERO : grand visuel + message d'impact + 2 boutons (Je fais un don / Comprendre les troubles dys) -->
+    <!-- hero : titre + texte + 2 boutons + image -->
     <section class="hero">
       <h1>Ce n'est pas de la paresse. C'est un trouble dys.</h1>
     </section>
 
-    <!-- BLOC SIMULATION : texte aux lettres mélangées qui se remet en ordre au survol -->
+    <!-- texte avec les lettres mélangées -->
     <section class="simulation"></section>
 
-    <!-- MISSIONS : grille asymétrique (CSS Grid), 3 à 4 cartes avec image, badge, résumé, barre de progression -->
+    <!-- nos actions (grille) -->
     <section class="missions"></section>
 
-    <!-- TÉMOIGNAGES : grille de témoignages -->
+    <!-- témoignages -->
     <section class="temoignages"></section>
 
-    <!-- BANDEAU DON : montants 10 / 20 / 50 / Autre + bouton -->
+    <!-- bandeau don -->
     <section class="bandeau-don"></section>
   </main>
 
-  <!-- ===== FOOTER (identique sur toutes les pages) ===== -->
-  <footer class="site-footer">
-    <div class="conteneur footer-grille">
+  <!-- footer -->
+  <footer>
+    <div class="conteneur footer-colonnes">
       <div>
-        <p class="logo-footer">DysTinct</p>
-        <p>Slogan de l'association</p>
+        <p class="footer-titre">DysTinct</p>
+        <p>Association pour les enfants dys</p>
       </div>
-      <nav aria-label="Liens rapides">
-        <h2>Liens rapides</h2>
+      <div>
+        <h3>Liens rapides</h3>
         <ul>
           <li><a href="apropos.html">À propos</a></li>
           <li><a href="valeurs.html">Nos valeurs</a></li>
           <li><a href="equipe.html">L'équipe</a></li>
           <li><a href="don.html">Faire un don</a></li>
         </ul>
-      </nav>
-      <form class="newsletter">
-        <h2>Newsletter</h2>
-        <label for="newsletter-index">Votre e-mail</label>
-        <input type="email" id="newsletter-index" placeholder="votre@email.fr">
-        <button type="submit" class="btn btn-principal">OK</button>
-      </form>
+      </div>
       <div>
-        <h2>Réseaux sociaux</h2>
-        <ul class="reseaux">
+        <h3>Newsletter</h3>
+        <form class="newsletter">
+          <input type="email" placeholder="votre@email.fr">
+          <button type="submit" class="btn btn-don">OK</button>
+        </form>
+      </div>
+      <div>
+        <h3>Réseaux sociaux</h3>
+        <ul>
           <li><a href="#">TikTok</a></li>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
@@ -86,7 +83,7 @@
     </div>
     <div class="conteneur footer-bas">
       <p>© 2026 DysTinct</p>
-      <p><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+      <p><a href="#">Mentions légales</a> - <a href="#">Confidentialité</a></p>
     </div>
   </footer>
 
